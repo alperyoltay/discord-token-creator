@@ -13,8 +13,8 @@ base64_bytes = base64.b64encode(message_bytes)
 first_half = base64_bytes.decode('ascii')   
 def force(): 
     while True:
-        middle = ''.join(random.choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-') for _ in range(6))
-        ende = ''.join(random.choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-') for _ in range(27))
+        middle = ''.join(random.choice('abcdefghijklmnopqrstuvwxyzXXABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-') for _ in range(6))
+        ende = ''.join(random.choice('abcdefghijklmnopqrstuvwxyzXXABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-') for _ in range(27))
         token = f"{first_half}.{middle}.{ende}"
     
         
